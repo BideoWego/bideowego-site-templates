@@ -1,20 +1,9 @@
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #fff;
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("https://s3.amazonaws.com/bw.bideowego/images/bideowego-banner-3.jpg"); }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
-  line-height: 1.5; }
 
 #home a {
   color: #fff; }
@@ -52,9 +41,8 @@ a:active {
   #home .social-links a:hover,
   #home .social-links a:focus,
   #home .social-links a:active {
-    color: #c1dbf8;
     background: transparent;
-    transition: border-width 0.5s; }
+    transition: border-width 0.2s; }
 #home .social-links a:hover, #home .social-links a:focus, #home .social-links a:active {
   border-top-width: 4px;
   border-bottom-width: 4px; }
@@ -80,5 +68,17 @@ a:active {
   #home .social-links {
     letter-spacing: 8px;
     font-size: 48px; } }
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #fff; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  line-height: 1.5; }
 
 /*# sourceMappingURL=style.css.map */

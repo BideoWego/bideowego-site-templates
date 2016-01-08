@@ -1,0 +1,130 @@
+// ----------------------------------------
+// Home
+// ----------------------------------------
+
+// Responsive background image with
+// radial gradient
+body {
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: 
+    radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('https://s3.amazonaws.com/bw.bideowego/images/bideowego-banner-3.jpg');
+}
+
+#home {
+
+  // Default anchor styles
+  a {
+    color: $light;
+  }
+  a:hover,
+  a:focus
+  a:active {
+    color: $primary;
+    outline: none;
+    text-decoration: none;
+  }
+
+  // Center all text
+  .site-title,
+  .tag-line,
+  .social-links,
+  .nav-container {
+    text-align: center;
+  }
+
+  // Desktop view has top margins
+  main,
+  .nav-container,
+  .social-links {
+    margin-top: 16px;
+  }
+
+  // Font sizes
+  .site-title {
+    font-size: 96px;
+  }
+  .nav-container .nav {
+    a {
+      font-size: 32px;
+    }
+  }
+  .tag-line {
+    font-size: 48px;
+  }
+  .social-links {
+    font-size: 64px;
+  }
+
+  // Hover transition
+  .site-title,
+  .nav-container a,
+  .social-links a {
+    border: 0 solid $light;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: transparent;
+      transition: border-width 0.2s;
+    }
+  }
+  .social-links a {
+    &:hover,
+    &:focus,
+    &:active {
+      border-top-width: 4px;
+      border-bottom-width: 4px;
+    }
+  }
+  .site-title,
+  .nav-container .nav a {
+    &:hover,
+    &:focus,
+    &:active {
+      border-left-width: 4px;
+      border-right-width: 4px;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-width - 1) {
+  #home {
+    // Mobile view has bottom margin
+    main {
+      margin-bottom: 64px;
+    }
+    // Remove desktop view top margins
+    main,
+    .nav-container,
+    .social-links {
+      margin-top: 0;
+    }
+
+    // Reduce site title font size
+    .site-title {
+      font-size: 48px;
+    }
+
+    // Reduce image width and center
+    .image-container {
+      margin: 0 auto;
+      max-width: $phone-width / 2;
+    }
+
+    // Reduce icon size and space out
+    .social-links {
+      letter-spacing: 8px;
+      font-size: 48px;
+    }
+  }
+}
+
