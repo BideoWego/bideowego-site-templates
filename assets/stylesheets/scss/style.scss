@@ -41,9 +41,13 @@ h6 {
 }
 
 #home {
+  a {
+    color: $light;
+  }
   a:hover,
   a:focus
   a:active {
+    color: $primary;
     outline: none;
     text-decoration: none;
   }
@@ -65,24 +69,10 @@ h6 {
     font-size: 96px;
   }
 
-  .nav-container {
+  .nav-container .nav {
     a {
       font-size: 32px;
     }
-    a:hover,
-    a:focus,
-    a:active {
-      background: transparent;
-    }
-  }
-
-  a {
-    color: $light;
-  }
-  a:hover,
-  a:focus,
-  a:active {
-    color: $primary;
   }
 
   .tag-line {
@@ -90,22 +80,48 @@ h6 {
   }
 
   .social-links {
-    letter-spacing: 16px;
     font-size: 64px;
   }
 
-  .nav-container,
-  .social-links {
-    a:hover,
-    a:focus,
-    a:active {
+  .site-title,
+  .nav-container a,
+  .social-links a {
+    border: 0 solid $light;
+
+    &:hover,
+    &:focus,
+    &:active {
       color: lighten($primary, 20%);
+      background: transparent;
+      transition: border-width 0.5s;
+    }
+  }
+
+  .social-links a {
+    &:hover,
+    &:focus,
+    &:active {
+      border-top-width: 4px;
+      border-bottom-width: 4px;
+    }
+  }
+
+  .site-title,
+  .nav-container .nav a {
+    &:hover,
+    &:focus,
+    &:active {
+      border-left-width: 4px;
+      border-right-width: 4px;
     }
   }
 }
 
 @media only screen and (max-width: $tablet-width - 1) {
   #home {
+    main {
+      margin-bottom: 64px;
+    }
     main,
     .nav-container,
     .social-links {
@@ -122,6 +138,7 @@ h6 {
     }
 
     .social-links {
+      letter-spacing: 8px;
       font-size: 48px;
     }
   }

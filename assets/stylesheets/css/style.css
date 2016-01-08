@@ -16,9 +16,12 @@ h6 {
   font-weight: 400;
   line-height: 1.5; }
 
+#home a {
+  color: #fff; }
 #home a:hover,
 #home a:focus
 a:active {
+  color: #65A7EE;
   outline: none;
   text-decoration: none; }
 #home .site-title,
@@ -32,32 +35,39 @@ a:active {
   margin-top: 16px; }
 #home .site-title {
   font-size: 96px; }
-#home .nav-container a {
+#home .nav-container .nav a {
   font-size: 32px; }
-#home .nav-container a:hover,
-#home .nav-container a:focus,
-#home .nav-container a:active {
-  background: transparent; }
-#home a {
-  color: #fff; }
-#home a:hover,
-#home a:focus,
-#home a:active {
-  color: #65A7EE; }
 #home .tag-line {
   font-size: 48px; }
 #home .social-links {
-  letter-spacing: 16px;
   font-size: 64px; }
-#home .nav-container a:hover,
-#home .nav-container a:focus,
-#home .nav-container a:active,
-#home .social-links a:hover,
-#home .social-links a:focus,
-#home .social-links a:active {
-  color: #c1dbf8; }
+#home .site-title,
+#home .nav-container a,
+#home .social-links a {
+  border: 0 solid #fff; }
+  #home .site-title:hover, #home .site-title:focus, #home .site-title:active,
+  #home .nav-container a:hover,
+  #home .nav-container a:focus,
+  #home .nav-container a:active,
+  #home .social-links a:hover,
+  #home .social-links a:focus,
+  #home .social-links a:active {
+    color: #c1dbf8;
+    background: transparent;
+    transition: border-width 0.5s; }
+#home .social-links a:hover, #home .social-links a:focus, #home .social-links a:active {
+  border-top-width: 4px;
+  border-bottom-width: 4px; }
+#home .site-title:hover, #home .site-title:focus, #home .site-title:active,
+#home .nav-container .nav a:hover,
+#home .nav-container .nav a:focus,
+#home .nav-container .nav a:active {
+  border-left-width: 4px;
+  border-right-width: 4px; }
 
 @media only screen and (max-width: 767px) {
+  #home main {
+    margin-bottom: 64px; }
   #home main,
   #home .nav-container,
   #home .social-links {
@@ -68,6 +78,7 @@ a:active {
     margin: 0 auto;
     max-width: 160px; }
   #home .social-links {
+    letter-spacing: 8px;
     font-size: 48px; } }
 
 /*# sourceMappingURL=style.css.map */
