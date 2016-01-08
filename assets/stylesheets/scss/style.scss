@@ -1,0 +1,135 @@
+// ----------------------------------------
+// Style
+// ----------------------------------------
+
+// Colors
+$light: #fff;
+$primary: #65A7EE;
+
+// Widths
+$tablet-height: 1024px;
+$tablet-width: 768px;
+$phone-height: 480px;
+$phone-width: 320px;
+
+body {
+  font-family: "Open Sans", sans-serif;
+
+  color: $light;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: 
+    radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('https://s3.amazonaws.com/bw.bideowego/images/bideowego-banner-3.jpg');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+#home {
+  a:hover,
+  a:focus
+  a:active {
+    outline: none;
+    text-decoration: none;
+  }
+
+  .site-title,
+  .tag-line,
+  .social-links,
+  .nav-container {
+    text-align: center;
+  }
+
+  main,
+  .nav-container,
+  .social-links {
+    margin-top: 16px;
+  }
+
+  .site-title {
+    font-size: 96px;
+  }
+
+  .nav-container {
+    a {
+      font-size: 32px;
+    }
+    a:hover,
+    a:focus,
+    a:active {
+      background: transparent;
+    }
+  }
+
+  a {
+    color: $light;
+  }
+  a:hover,
+  a:focus,
+  a:active {
+    color: $primary;
+  }
+
+  .tag-line {
+    font-size: 48px;
+  }
+
+  .social-links {
+    letter-spacing: 16px;
+    font-size: 64px;
+  }
+
+  .nav-container,
+  .social-links {
+    a:hover,
+    a:focus,
+    a:active {
+      color: lighten($primary, 20%);
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-width - 1) {
+  #home {
+    main,
+    .nav-container,
+    .social-links {
+      margin-top: 0;
+    }
+
+    .site-title {
+      font-size: 48px;
+    }
+
+    .image-container {
+      margin: 0 auto;
+      max-width: $phone-width / 2;
+    }
+
+    .social-links {
+      font-size: 48px;
+    }
+  }
+}
+
+
+
+
+
+
+
