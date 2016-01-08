@@ -74,7 +74,7 @@ body {
     &:focus,
     &:active {
       background: transparent;
-      transition: border-width 0.2s;
+      transition: border-width 300ms ease-in-out;
     }
   }
   .social-links a {

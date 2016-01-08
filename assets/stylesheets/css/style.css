@@ -42,7 +42,7 @@ a:active {
   #home .social-links a:focus,
   #home .social-links a:active {
     background: transparent;
-    transition: border-width 0.2s; }
+    transition: border-width 300ms ease-in-out; }
 #home .social-links a:hover, #home .social-links a:focus, #home .social-links a:active {
   border-top-width: 4px;
   border-bottom-width: 4px; }
