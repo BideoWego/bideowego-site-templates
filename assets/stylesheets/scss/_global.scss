@@ -6,9 +6,40 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: $light;
+
+  // background image
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: 
+    radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('https://s3.amazonaws.com/bw.bideowego/images/bideowego-banner-3.jpg');
 }
 
-// Remove Bootstrap heading styles
+
+// Bootstrap
+
+// Anchors
+
+a {
+  color: $light;
+}
+a:hover,
+a:focus
+a:active {
+  color: $primary;
+  outline: none;
+  text-decoration: none;
+}
+
+// Headings
+
 h1,
 h2,
 h3,
@@ -18,4 +49,145 @@ h6 {
   font-weight: 400;
   line-height: 1.5;
 }
+
+// Bootstrap nav
+.navbar-default {
+  border-color: $primary;
+}
+.navbar,
+.navbar-default {
+  // Remove Bootstrap navbar border radius
+  border-radius: 0;
+
+  background: $primary;
+  color: $light;
+
+  .navbar-nav .open .dropdown-menu > li > a:active,
+  .navbar-nav .open .dropdown-menu > li > a:focus,
+  .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-nav > .open > a,
+  .navbar-nav > .open > a:active,
+  .navbar-nav > .open > a:focus,
+  .navbar-nav > .open > a:hover,
+  .navbar-nav > li > a:active,
+  .navbar-nav > li > a:focus,
+  .navbar-nav > li > a:hover,
+  .dropdown-menu > li > a:active,
+  .dropdown-menu > li > a:focus,
+  .dropdown-menu > li > a:hover,
+  .navbar-brand:active,
+  .navbar-brand:focus,
+  .navbar-brand:hover,
+  a:active,
+  a:hover,
+  a:focus {
+    color: darken($primary, 40%);
+  }
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: $light;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $light;
+}
+.navbar-default .navbar-toggle {
+  border-color: $light;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($primary, 5%);
+  }
+}
+
+.navbar-brand {
+  text-indent: 8px;
+}
+.navbar-logo {
+  line-height: 48px;
+  img {
+    max-width: 32px;
+  }
+}
+
+// Site title
+.site-title {
+  @include transition-border-x;
+  font-size: 96px;
+  text-align: center;
+}
+
+// Footer
+#main-footer {
+  .site-map,
+  .copyright,
+  .social-links {
+    text-align: center;
+    a {
+      @include transition-border-y;
+    }
+  }
+
+  .site-map {
+    a:before,
+    a:after {
+      content: "\0000a0";
+    }
+  }
+
+  .site-map,
+  .copyright {
+    font-size: 24px;
+  }
+
+  .social-links  {
+    margin-top: 16px;
+    font-size: 64px;
+  }
+
+}
+
+#blog-index,
+#blog-archive {
+  .post {
+    margin-bottom: 64px;
+  }
+
+  #main-footer {
+    margin-top: 64px;
+    margin-bottom: 128px;
+  }
+
+  .media-object {
+    max-width: 128px;
+  }
+}
+
+@media only screen and (max-width: $tablet-width - 1) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: $light;
+  }
+  .navbar-brand {
+    text-indent: -8px;
+  }
+  .navbar-logo {
+    text-indent: 15px;
+  }
+
+  // Reduce site title font size
+  .site-title {
+    font-size: 48px;
+  }
+
+  // Reduce icon size and space out
+  #main-footer .social-links {
+    letter-spacing: 8px;
+    font-size: 48px;
+  }
+}
+
+
+
+
+
 

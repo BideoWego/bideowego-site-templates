@@ -2,7 +2,10 @@
 // Style
 // ----------------------------------------
 
-@import 'settings';
-@import 'home';
-@import 'global';
+@import 'settings',
+        'mixins',
+        'home',
+        'blog/index',
+        'blog/archive',
+        'global';
 
