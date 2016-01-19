@@ -2,6 +2,10 @@
 // Global
 // ----------------------------------------
 
+// ----------------------------------------
+// HTML Elements
+// ----------------------------------------
+
 // Default font and color
 body {
   font-family: "Open Sans", sans-serif;
@@ -49,6 +53,10 @@ h6 {
   font-weight: 400;
   line-height: 1.5;
 }
+
+// ----------------------------------------
+// Nav
+// ----------------------------------------
 
 // Bootstrap nav
 .navbar-default {
@@ -110,12 +118,39 @@ h6 {
   }
 }
 
+// ----------------------------------------
+// Pagination
+// ----------------------------------------
+
+.pagination > li > a {
+  font-size: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: transparent;
+  color: $light;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $primary;
+    color: $light;
+  }
+}
+
+// ----------------------------------------
+// Header
+// ----------------------------------------
+
 // Site title
 .site-title {
   @include transition-border-x;
   font-size: 96px;
   text-align: center;
 }
+
+// ----------------------------------------
+// Footer
+// ----------------------------------------
 
 // Footer
 #main-footer {
@@ -147,6 +182,10 @@ h6 {
 
 }
 
+// ----------------------------------------
+// Blog
+// ----------------------------------------
+
 #blog-index,
 #blog-archive {
   .post {
@@ -163,6 +202,10 @@ h6 {
   }
 }
 
+// ----------------------------------------
+// Mobile View
+// ----------------------------------------
+
 @media only screen and (max-width: $tablet-width - 1) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: $light;
@@ -177,6 +220,13 @@ h6 {
   // Reduce site title font size
   .site-title {
     font-size: 48px;
+  }
+
+  #blog-index,
+  #blog-archive {
+    .media-object {
+      max-width: 64px;
+    }
   }
 
   // Reduce icon size and space out

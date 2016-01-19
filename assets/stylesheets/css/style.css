@@ -133,6 +133,16 @@ h6 {
   .navbar-logo img {
     max-width: 32px; }
 
+.pagination > li > a {
+  font-size: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: transparent;
+  color: #fff; }
+  .pagination > li > a:hover, .pagination > li > a:active, .pagination > li > a:focus {
+    background-color: #5996D6;
+    color: #fff; }
+
 .site-title {
   border: 0 solid #fff;
   font-size: 96px;
@@ -203,6 +213,10 @@ h6 {
 
   .site-title {
     font-size: 48px; }
+
+  #blog-index .media-object,
+  #blog-archive .media-object {
+    max-width: 64px; }
 
   #main-footer .social-links {
     letter-spacing: 8px;

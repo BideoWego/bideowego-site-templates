@@ -24,45 +24,49 @@ if ($('#blog-archive').length) {
     // Find the toggle anchor
     // Font Awesome icon
     // and element to slide
-    var $toggle = $(this);
     var $icon = $(this).find('.fa');
     var $slider = $(this).parent().parent();
+
+    // Prep vars
+    var container,
+        currentIconClass,
+        nextIconClass;
 
     // If the slider is a year
     // we're sliding the month
     // else we're sliding the month's posts
     if ($slider.hasClass('year')) {
       // Find the month
-      $slider = $slider.find('.month');
-
+      container = '.month';
 
       // If the icon is an closed folder
       // open it
       // esle close it
-      if ($icon.hasClass('fa-folder')) {
-        $icon.removeClass('fa-folder');
-        $icon.addClass('fa-folder-open');
-      } else if ($icon.hasClass('fa-folder-open')) {
-        $icon.removeClass('fa-folder-open');
-        $icon.addClass('fa-folder');
-      }
+      openClass = 'fa-folder-open';
+      closedClass = 'fa-folder';
 
     } else if ($slider.hasClass('month')) {
       
       // Find the posts
-      $slider = $slider.find('.posts');
+      container = '.posts';
       
       // If the icon is a plus
       // set to minus
       // else set to plus
-      if ($icon.hasClass('fa-plus')) {
-        $icon.removeClass('fa-plus');
-        $icon.addClass('fa-minus');
-      } else if ($icon.hasClass('fa-minus')) {
-        $icon.removeClass('fa-minus');
-        $icon.addClass('fa-plus');
-      }
+      openClass = 'fa-minus';
+      closedClass = 'fa-plus';
     }
+
+    // Find containing element
+    $slider = $slider.find(container);
+
+    // Get the correct current and next icon classes
+    currentIconClass = ($icon.hasClass(openClass)) ? closedClass : openClass;
+    nextIconClass = ($icon.hasClass(openClass)) ? openClass : closedClass;
+
+    // Swap icons
+    $icon.removeClass(currentIconClass);
+    $icon.addClass(nextIconClass);
 
     // Toggle the slider
     $slider.slideToggle();
