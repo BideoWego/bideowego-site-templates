@@ -33,13 +33,14 @@ body {
 
 a {
   color: $light;
-}
-a:hover,
-a:focus
-a:active {
-  color: $primary;
-  outline: none;
-  text-decoration: none;
+
+  &:hover,
+  &:focus
+  &:active {
+    color: $primary;
+    outline: none;
+    text-decoration: none;
+  }
 }
 
 // Headings
@@ -52,6 +53,28 @@ h5,
 h6 {
   font-weight: 400;
   line-height: 1.5;
+}
+
+// ----------------------------------------
+// Text
+// ----------------------------------------
+
+.text-dark {
+  color: $dark;
+
+  a {
+    color: $primary;
+    font-weight: bold;
+    
+    &:hover,
+    &:focus
+    &:active {
+      color: darken($primary, 10%);
+      outline: none;
+      text-decoration: none;
+    }
+  }
+
 }
 
 // ----------------------------------------

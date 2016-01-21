@@ -9,7 +9,7 @@
 #home .tag-line {
   font-size: 48px; }
 #home .nav-container a {
-  border: 0 solid #fff; }
+  border: 0 solid #eee; }
   #home .nav-container a:hover, #home .nav-container a:focus, #home .nav-container a:active {
     background: transparent;
     transition: border-width 300ms ease-in-out; }
@@ -28,7 +28,7 @@
     margin: 0 auto;
     max-width: 160px; } }
 #blog-archive .archive-toggle {
-  border: 0 solid #fff;
+  border: 0 solid #eee;
   text-indent: 1em; }
   #blog-archive .archive-toggle:hover, #blog-archive .archive-toggle:focus, #blog-archive .archive-toggle:active {
     background: transparent;
@@ -39,7 +39,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: #fff;
+  color: #eee;
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -47,14 +47,12 @@ body {
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("https://s3.amazonaws.com/bw.bideowego/images/bideowego-banner-3.jpg"); }
 
 a {
-  color: #fff; }
-
-a:hover,
-a:focus
-a:active {
-  color: #5996D6;
-  outline: none;
-  text-decoration: none; }
+  color: #eee; }
+  a:hover, a:focus
+  a:active {
+    color: #5996D6;
+    outline: none;
+    text-decoration: none; }
 
 h1,
 h2,
@@ -65,6 +63,17 @@ h6 {
   font-weight: 400;
   line-height: 1.5; }
 
+.text-dark {
+  color: #111; }
+  .text-dark a {
+    color: #5996D6;
+    font-weight: bold; }
+    .text-dark a:hover, .text-dark a:focus
+    .text-dark a:active {
+      color: #327cca;
+      outline: none;
+      text-decoration: none; }
+
 .navbar-default {
   border-color: #5996D6; }
 
@@ -72,7 +81,7 @@ h6 {
 .navbar-default {
   border-radius: 0;
   background: #5996D6;
-  color: #fff; }
+  color: #eee; }
   .navbar .navbar-nav .open .dropdown-menu > li > a:active,
   .navbar .navbar-nav .open .dropdown-menu > li > a:focus,
   .navbar .navbar-nav .open .dropdown-menu > li > a:hover,
@@ -115,13 +124,13 @@ h6 {
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
-  color: #fff; }
+  color: #eee; }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #fff; }
+  background-color: #eee; }
 
 .navbar-default .navbar-toggle {
-  border-color: #fff; }
+  border-color: #eee; }
   .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active, .navbar-default .navbar-toggle:focus {
     background-color: #4589d1; }
 
@@ -138,13 +147,13 @@ h6 {
   padding-left: 16px;
   padding-right: 16px;
   background-color: transparent;
-  color: #fff; }
+  color: #eee; }
   .pagination > li > a:hover, .pagination > li > a:active, .pagination > li > a:focus {
     background-color: #5996D6;
-    color: #fff; }
+    color: #eee; }
 
 .site-title {
-  border: 0 solid #fff;
+  border: 0 solid #eee;
   font-size: 96px;
   text-align: center; }
   .site-title:hover, .site-title:focus, .site-title:active {
@@ -161,7 +170,7 @@ h6 {
   #main-footer .site-map a,
   #main-footer .copyright a,
   #main-footer .social-links a {
-    border: 0 solid #fff; }
+    border: 0 solid #eee; }
     #main-footer .site-map a:hover, #main-footer .site-map a:focus, #main-footer .site-map a:active,
     #main-footer .copyright a:hover,
     #main-footer .copyright a:focus,
@@ -203,7 +212,7 @@ h6 {
 
 @media only screen and (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #fff; }
+    color: #eee; }
 
   .navbar-brand {
     text-indent: -8px; }
