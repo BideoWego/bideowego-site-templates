@@ -6,12 +6,10 @@
 // HTML Elements
 // ----------------------------------------
 
-// Default font and color
 body {
   font-family: "Open Sans", sans-serif;
   color: $light;
 
-  // background image
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -26,11 +24,6 @@ body {
     url('https://s3.amazonaws.com/bw.bideowego/images/bideowego-banner-3.jpg');
 }
 
-
-// Bootstrap
-
-// Anchors
-
 a {
   color: $light;
 
@@ -42,8 +35,6 @@ a {
     text-decoration: none;
   }
 }
-
-// Headings
 
 h1,
 h2,
@@ -81,13 +72,11 @@ h6 {
 // Nav
 // ----------------------------------------
 
-// Bootstrap nav
 .navbar-default {
   border-color: $primary;
 }
 .navbar,
 .navbar-default {
-  // Remove Bootstrap navbar border radius
   border-radius: 0;
 
   background: $primary;
@@ -183,7 +172,7 @@ h6 {
 // Header
 // ----------------------------------------
 
-// Site title
+
 .site-title {
   @include transition-border-x;
   font-size: 96px;
@@ -194,7 +183,7 @@ h6 {
 // Footer
 // ----------------------------------------
 
-// Footer
+
 #main-footer {
   .site-map,
   .copyright,
@@ -273,6 +262,12 @@ h6 {
 // ----------------------------------------
 
 @media only screen and (max-width: $tablet-width - 1) {
+
+
+  // ----------------------------------------
+  // Mobile Navbar
+  // ----------------------------------------
+
   .navbar-default .navbar-nav > li > a {
     color: $light;
 
@@ -303,10 +298,18 @@ h6 {
     }
   }
 
-  // Reduce site title font size
+
+  // ----------------------------------------
+  // Mobile Site Title
+  // ----------------------------------------
+
   .site-title {
     font-size: 48px;
   }
+
+  // ----------------------------------------
+  // Mobile Index Media Object
+  // ----------------------------------------
 
   #blog-index,
   #blog-categories,
@@ -319,7 +322,11 @@ h6 {
     }
   }
 
-  // Reduce icon size and space out
+  
+  // ----------------------------------------
+  // Mobile Footer Icons
+  // ----------------------------------------
+
   #main-footer .social-links {
     letter-spacing: 8px;
     font-size: 48px;
