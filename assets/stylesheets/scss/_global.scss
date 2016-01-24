@@ -225,6 +225,24 @@ h6 {
 }
 
 // ----------------------------------------
+// All articles
+// ----------------------------------------
+
+#about,
+#blog-post,
+#project-show,
+#game-show {
+  article {
+    max-width: 512px;
+    margin: 0 auto;
+
+    p {
+      text-indent: 2em;
+    }
+  }
+}
+
+// ----------------------------------------
 // All Index Pages
 // ----------------------------------------
 
@@ -291,7 +309,11 @@ h6 {
   }
 
   #blog-index,
-  #blog-archive {
+  #blog-categories,
+  #blog-tags,
+  #blog-archive,
+  #games-index,
+  #projects-index {
     .media-object {
       max-width: 64px;
     }
