@@ -19,6 +19,8 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- My Styles -->
     <link rel="stylesheet" href="/assets/stylesheets/css/style.css">
+
+    <script>var disqus_developer = 1;</script>
   </head>
   <body id="blog-post">
     
@@ -436,6 +438,41 @@
           <h2>wbr</h2>
           <p>Veryveryveryveryveryveryveryvery<wbr>veryveryveryveryveryveryvery</p>
           <br>
+
+
+          <!-- Comments -->
+          <div class="row comments well text-dark">
+            <div class="col-xs-10 col-xs-offset-1">
+              
+              <h1>Comments</h1>
+
+              <div id="disqus_thread"></div>
+              <script>
+              var disqus_developer = 1;
+                  /**
+                   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                   */
+                  
+                  var disqus_config = function () {
+                      this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+                      this.page.identifier = 1; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  
+                  (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                      var d = document, s = d.createElement('script');
+                      
+                      s.src = '//EXAMPLE.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+                      
+                      s.setAttribute('data-timestamp', +new Date());
+                      (d.head || d.body).appendChild(s);
+                  })();
+              </script>
+              <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+            </div>
+          </div><!-- comments -->
+
 
         </div>
       </div><!-- post row -->

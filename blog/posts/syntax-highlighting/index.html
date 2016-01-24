@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bideo Wego | Blog Archive</title>
+    <title>Bideo Wego | Blog > Posts > Hello World</title>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -19,8 +19,14 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- My Styles -->
     <link rel="stylesheet" href="/assets/stylesheets/css/style.css">
+
+    <!-- My Syntax Highlighting -->
+    <link rel="stylesheet" href="https://s3.amazonaws.com/bw.bideowego/css/prism.css">
+    <script src="https://s3.amazonaws.com/bw.bideowego/js/prism.js"></script>
+
+    <script>var disqus_developer = 1;</script>
   </head>
-  <body id="blog-archive">
+  <body id="blog-post">
     
     <!-- Nav -->
     <nav class="navbar navbar-default">
@@ -71,110 +77,62 @@
       <!-- Header Site Title -->
       <header class="page-header">
         <h1 class="site-title">
-          <a href="/blog/archive">
-            Blog Archive
+          <a href="/blog/posts/syntax-highlighting">
+            Syntax Highlighting
           </a>
         </h1>
       </header>
-      
 
-      <!-- Archive -->
-      <div id="archive" class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-          
-          <!-- Year -->
-          <div class="folder year row">
-            <h2>
-              <a href="#" class="folder-toggle">
-                <i class="fa fa-folder-open"></i>
-                2016
-              </a>
-            </h2>
+      <!-- Post -->
+      <div class="post row text-dark">
+        <div class="col-xs-10 col-xs-offset-1 well">
 
-            <!-- Month -->
-            <div class="folder month col-xs-10 col-xs-offset-1">
-              <h2>
-                <a href="#" class="folder-toggle">
-                  <i class="fa fa-minus"></i>
-                  January
-                </a>
-              </h2>
+
+<!-- Syntax Highlighting -->
+<pre><code class="language-ruby">class Foo
+  def initialize(options={})
+    @bar = options[:bar]
+  end
+end
+</code></pre>
+
+
+          <!-- Comments -->
+          <div class="row comments well text-dark">
+            <div class="col-xs-10 col-xs-offset-1">
               
-              <div class="posts row">
-                
-                <!-- Post -->
-                <div class="post media col-xs-10 col-xs-offset-1">
-                  <div class="media-left">
-                    <a href="#">
-                      <img class="media-object" src="https://s3.amazonaws.com/bw.bideowego/images/bw.png" alt="Image">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h4 class="media-heading">
-                      <a href="/blog/posts/hello-world">
-                        Hello World
-                      </a>
-                      <small>
-                        <i class="fa fa-calendar"></i>
-                        Monday, January 1st 2016
-                      </small>
-                    </h4>
-                    <p>
-                      <i class="fa fa-columns"></i>
-                      Comma, Separated, List, Of, Categories
-                    </p>
-                    <p>
-                      <i class="fa fa-tags"></i>
-                      #comma, #separated, #list, #of, #tags
-                    </p>
-                    <div class="excerpt">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas non odio dolores laudantium assumenda!
-                    </div>
-                  </div>
-                </div><!-- post -->
+              <h1>Comments</h1>
+
+              <div id="disqus_thread"></div>
+              <script>
+              var disqus_developer = 1;
+                  /**
+                   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                   */
+                  
+                  var disqus_config = function () {
+                      this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+                      this.page.identifier = 1; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  
+                  (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                      var d = document, s = d.createElement('script');
+                      
+                      s.src = '//EXAMPLE.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+                      
+                      s.setAttribute('data-timestamp', +new Date());
+                      (d.head || d.body).appendChild(s);
+                  })();
+              </script>
+              <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+            </div>
+          </div><!-- comments -->
 
 
-                <!-- Post -->
-                <div class="post media col-xs-10 col-xs-offset-1">
-                  <div class="media-left">
-                    <a href="#">
-                      <img class="media-object" src="https://s3.amazonaws.com/bw.bideowego/images/bw.png" alt="Image">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h4 class="media-heading">
-                      <a href="/blog/posts/syntax-highlighting">
-                        Syntax Highlighting
-                      </a>
-                      <small>
-                        <i class="fa fa-calendar"></i>
-                        Monday, January 1st 2016
-                      </small>
-                    </h4>
-                    <p>
-                      <i class="fa fa-columns"></i>
-                      Comma, Separated, List, Of, Categories
-                    </p>
-                    <p>
-                      <i class="fa fa-tags"></i>
-                      #comma, #separated, #list, #of, #tags
-                    </p>
-                    <div class="excerpt">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas non odio dolores laudantium assumenda!
-                    </div>
-                  </div>
-                </div><!-- post -->
-
-
-              </div>
-            </div><!-- month -->
-
-
-          </div><!-- year -->
-
-
-        </div><!-- col -->
-      </div><!-- arcive row -->
+        </div>
+      </div><!-- post row -->
 
     </main>
 
