@@ -27,6 +27,12 @@
   #home .image-container {
     margin: 0 auto;
     max-width: 160px; } }
+#about article {
+  max-width: 512px;
+  margin: 0 auto; }
+  #about article p {
+    text-indent: 2em; }
+
 #blog-archive .archive-toggle {
   border: 0 solid #eee;
   text-indent: 1em; }
@@ -82,6 +88,9 @@ h6 {
   border-radius: 0;
   background: #5996D6;
   color: #eee; }
+  .navbar a,
+  .navbar-default a {
+    font-size: 1.25em; }
   .navbar .navbar-nav .open .dropdown-menu > li > a:active,
   .navbar .navbar-nav .open .dropdown-menu > li > a:focus,
   .navbar .navbar-nav .open .dropdown-menu > li > a:hover,
@@ -120,7 +129,18 @@ h6 {
   .navbar-default a:active,
   .navbar-default a:hover,
   .navbar-default a:focus {
-    color: #14314f; }
+    color: #193d64; }
+  .navbar .dropdown-menu,
+  .navbar-default .dropdown-menu {
+    padding: 0 0 5px 0; }
+    .navbar .dropdown-menu a,
+    .navbar-default .dropdown-menu a {
+      border-left: 0 solid #5996D6;
+      padding: 8px; }
+      .navbar .dropdown-menu a:hover,
+      .navbar-default .dropdown-menu a:hover {
+        border-left-width: 4px;
+        transition: border-width 300ms; }
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
@@ -199,26 +219,63 @@ h6 {
   margin-top: 16px;
   font-size: 64px; }
 
+#games-index .post,
+#games-index .game,
+#games-index .project,
+#projects-index .post,
+#projects-index .game,
+#projects-index .project,
 #blog-index .post,
-#blog-archive .post {
+#blog-index .game,
+#blog-index .project,
+#blog-archive .post,
+#blog-archive .game,
+#blog-archive .project,
+#blog-categories .post,
+#blog-categories .game,
+#blog-categories .project,
+#blog-tags .post,
+#blog-tags .game,
+#blog-tags .project {
   margin-bottom: 64px; }
+#games-index .media-object,
+#projects-index .media-object,
+#blog-index .media-object,
+#blog-archive .media-object,
+#blog-categories .media-object,
+#blog-tags .media-object {
+  max-width: 128px; }
+#games-index #main-footer,
+#projects-index #main-footer,
 #blog-index #main-footer,
-#blog-archive #main-footer {
+#blog-archive #main-footer,
+#blog-categories #main-footer,
+#blog-tags #main-footer {
   margin-top: 64px;
   margin-bottom: 128px; }
-#blog-index .media-object,
-#blog-archive .media-object {
-  max-width: 128px; }
 
 @media only screen and (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #eee; }
+  .navbar-default .navbar-nav > li > a {
+    color: #eee;
+    font-size: 1.25em;
+    border-left: 0 solid #eee;
+    padding: 8px; }
+    .navbar-default .navbar-nav > li > a:hover {
+      border-left-width: 4px;
+      transition: border-width 300ms; }
 
   .navbar-brand {
     text-indent: -8px; }
 
   .navbar-logo {
     text-indent: 15px; }
+
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #eee; }
+
+  .navbar .dropdown-menu a,
+  .navbar-default .dropdown-menu a {
+    border-left: 0 solid #eee; }
 
   .site-title {
     font-size: 48px; }

@@ -4,7 +4,7 @@
 
 if ($('#blog-archive').length) {
 
-  // Fold up archives to start
+  // Fold up to start
   $('.posts, .month').hide();
 
   // Toggle icons to start

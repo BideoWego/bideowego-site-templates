@@ -5,6 +5,8 @@ OUT="$PWD/assets/js/script.js"
 FILES=(
   'folder'
   'blog/archive'
+  'blog/categories'
+  'blog/tags'
 )
 
 # --------------------------------------------

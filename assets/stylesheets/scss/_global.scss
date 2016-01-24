@@ -93,6 +93,10 @@ h6 {
   background: $primary;
   color: $light;
 
+  a {
+    font-size: 1.25em;
+  }
+
   .navbar-nav .open .dropdown-menu > li > a:active,
   .navbar-nav .open .dropdown-menu > li > a:focus,
   .navbar-nav .open .dropdown-menu > li > a:hover,
@@ -112,7 +116,21 @@ h6 {
   a:active,
   a:hover,
   a:focus {
-    color: darken($primary, 40%);
+    color: darken($primary, 35%);
+  }
+
+  .dropdown-menu {
+    padding: 0 0 5px 0;
+
+    a {
+      border-left: 0 solid $primary;
+      padding: 8px;
+
+      &:hover {
+        border-left-width: 4px;
+        transition: border-width 300ms;
+      }
+    }
   }
 }
 .navbar-default .navbar-brand,
@@ -124,6 +142,7 @@ h6 {
 }
 .navbar-default .navbar-toggle {
   border-color: $light;
+
   &:hover,
   &:active,
   &:focus {
@@ -206,22 +225,28 @@ h6 {
 }
 
 // ----------------------------------------
-// Blog
+// All Index Pages
 // ----------------------------------------
 
+#games-index,
+#projects-index,
 #blog-index,
-#blog-archive {
-  .post {
+#blog-archive,
+#blog-categories,
+#blog-tags {
+  .post,
+  .game,
+  .project {
     margin-bottom: 64px;
+  }
+
+  .media-object {
+    max-width: 128px;
   }
 
   #main-footer {
     margin-top: 64px;
     margin-bottom: 128px;
-  }
-
-  .media-object {
-    max-width: 128px;
   }
 }
 
@@ -230,14 +255,34 @@ h6 {
 // ----------------------------------------
 
 @media only screen and (max-width: $tablet-width - 1) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  .navbar-default .navbar-nav > li > a {
     color: $light;
+
+    font-size: 1.25em;
+    border-left: 0 solid $light;
+    padding: 8px;
+
+    &:hover {
+      border-left-width: 4px;
+      transition: border-width 300ms;
+    }
   }
   .navbar-brand {
     text-indent: -8px;
   }
   .navbar-logo {
     text-indent: 15px;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: $light;
+  }
+  .navbar,
+  .navbar-default {
+    .dropdown-menu {
+      a {
+        border-left: 0 solid $light;
+      }
+    }
   }
 
   // Reduce site title font size

@@ -81,7 +81,7 @@ $.fn.folder = function(options) {
 
 if ($('#blog-archive').length) {
 
-  // Fold up archives to start
+  // Fold up to start
   $('.posts, .month').hide();
 
   // Toggle icons to start
@@ -98,6 +98,44 @@ if ($('#blog-archive').length) {
     iconOpen: 'fa-folder-open',
     iconClosed: 'fa-folder'
   });
+
+}
+
+// ------------------------------------------------
+// Blog Categories
+// ------------------------------------------------
+
+if ($('#blog-categories').length) {
+
+  // Fold up to start
+  $('.posts').hide();
+
+  // Toggle icons to start
+  $('.fa-minus')
+    .removeClass('fa-minus')
+    .addClass('fa-plus');
+  
+  // Set folder events
+  $('.folder.category').folder();
+
+}
+
+// ------------------------------------------------
+// Blog Tags
+// ------------------------------------------------
+
+if ($('#blog-tags').length) {
+
+  // Fold up to start
+  $('.posts').hide();
+
+  // Toggle icons to start
+  $('.fa-minus')
+    .removeClass('fa-minus')
+    .addClass('fa-plus');
+  
+  // Set folder events
+  $('.folder.tag').folder();
 
 }
 
