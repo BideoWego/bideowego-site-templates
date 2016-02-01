@@ -177,41 +177,44 @@ h6 {
     border-left-width: 4px;
     border-right-width: 4px; }
 
-#main-footer .site-map,
-#main-footer .copyright,
-#main-footer .social-links {
-  text-align: center; }
-  #main-footer .site-map a,
-  #main-footer .copyright a,
-  #main-footer .social-links a {
-    border: 0 solid #eee; }
-    #main-footer .site-map a:hover, #main-footer .site-map a:focus, #main-footer .site-map a:active,
-    #main-footer .copyright a:hover,
-    #main-footer .copyright a:focus,
-    #main-footer .copyright a:active,
-    #main-footer .social-links a:hover,
-    #main-footer .social-links a:focus,
-    #main-footer .social-links a:active {
-      background: transparent;
-      transition: border-width 300ms ease-in-out; }
-    #main-footer .site-map a:hover, #main-footer .site-map a:focus, #main-footer .site-map a:active,
-    #main-footer .copyright a:hover,
-    #main-footer .copyright a:focus,
-    #main-footer .copyright a:active,
-    #main-footer .social-links a:hover,
-    #main-footer .social-links a:focus,
-    #main-footer .social-links a:active {
-      border-top-width: 4px;
-      border-bottom-width: 4px; }
-#main-footer .site-map a:before,
-#main-footer .site-map a:after {
-  content: "\0000a0"; }
-#main-footer .site-map,
-#main-footer .copyright {
-  font-size: 24px; }
-#main-footer .social-links {
-  margin-top: 16px;
-  font-size: 64px; }
+#main-footer {
+  margin-top: 64px;
+  margin-bottom: 128px; }
+  #main-footer .site-map,
+  #main-footer .copyright,
+  #main-footer .social-links {
+    text-align: center; }
+    #main-footer .site-map a,
+    #main-footer .copyright a,
+    #main-footer .social-links a {
+      border: 0 solid #eee; }
+      #main-footer .site-map a:hover, #main-footer .site-map a:focus, #main-footer .site-map a:active,
+      #main-footer .copyright a:hover,
+      #main-footer .copyright a:focus,
+      #main-footer .copyright a:active,
+      #main-footer .social-links a:hover,
+      #main-footer .social-links a:focus,
+      #main-footer .social-links a:active {
+        background: transparent;
+        transition: border-width 300ms ease-in-out; }
+      #main-footer .site-map a:hover, #main-footer .site-map a:focus, #main-footer .site-map a:active,
+      #main-footer .copyright a:hover,
+      #main-footer .copyright a:focus,
+      #main-footer .copyright a:active,
+      #main-footer .social-links a:hover,
+      #main-footer .social-links a:focus,
+      #main-footer .social-links a:active {
+        border-top-width: 4px;
+        border-bottom-width: 4px; }
+  #main-footer .site-map a:before,
+  #main-footer .site-map a:after {
+    content: "\0000a0"; }
+  #main-footer .site-map,
+  #main-footer .copyright {
+    font-size: 24px; }
+  #main-footer .social-links {
+    margin-top: 16px;
+    font-size: 64px; }
 
 #about article,
 #blog-post article,
@@ -251,14 +254,6 @@ h6 {
 #blog-categories .media-object,
 #blog-tags .media-object {
   max-width: 128px; }
-#games-index #main-footer,
-#projects-index #main-footer,
-#blog-index #main-footer,
-#blog-archive #main-footer,
-#blog-categories #main-footer,
-#blog-tags #main-footer {
-  margin-top: 64px;
-  margin-bottom: 128px; }
 
 @media only screen and (max-width: 767px) {
   .navbar-default .navbar-nav > li > a {
@@ -275,6 +270,11 @@ h6 {
 
   .navbar-logo {
     text-indent: 15px; }
+
+  .nav .open > a,
+  .nav .open > a:focus,
+  .nav .open > a:hover {
+    border-color: #5996D6; }
 
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #eee; }
